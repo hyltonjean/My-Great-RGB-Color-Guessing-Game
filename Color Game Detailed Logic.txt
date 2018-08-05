@@ -1,0 +1,161 @@
+**********************************************************************************************
+=>> The Great RGB Guessing Game <<=
+**********************************************************************************************
+=>> JavaScript Logic Only => No Styling <<=
+**********************************************************************************************
+
+// Give colors to squares (rgb values) using JavaScript(hard code it first) in an array called colors and loop through them using for loop
+
+// Setup goal color(pickedColor)hardcode a set color first
+
+// Create a span in H1 between RGB and create id=colorDisplay in span and select it and set equal to pickedColor
+
+// add click listeners to squares use the same loop(test with alert)
+
+// grab the color from clicked square(can use "this" keyword)
+
+// compare color to pickedColor variable with if statement to diplay "correct" or "wrong"
+
+**********************************************************************************************
+
+// If the wrong color is selected it needs to be faded out by selecting the body's background color.
+
+// Create a span in a div to display 'correct' or 'try again' text. Give the span an id "message".
+
+// Create a variable messageDisplay and select the span id you created then change background color to white.
+
+// Set messageDisplay textContent to "Try Again" if wrong and "Correct!" if correct.
+
+// Change all colors to the correctly selected color as below:
+
+// Create a function changeColors with one argument (color):
+
+// Loop through all squares
+
+// Change each color to match the given color
+
+// Call changeColors in if statement and pass (clickedColor) as argument
+
+// Create a pickColor() function to create a random color for all squares 
+   and when game get restarted etc.
+
+// Create Math.floor and random * colors.length and save to variable random
+
+// Return colors of variable random in function
+
+// Call function and set equal to pickedColor variable.
+
+**********************************************************************************************
+
+// Create a function called generateRandomColors(num) to pass a number of random colors to be called and remove the (hard coded) colors:
+
+// Make an Array, loop/repeat num times with (randomColor()), get random color and push into arr, return that array
+
+// Create another function randomColor() which picks a "red" from 0 - 255 and same for green and blue
+
+// Save to variable r,g,b respectively and concat r, g, b together with variables and return that rgb string
+
+// Then push the randomColor() to the empty arr when calling it in the generateRandomColors() function within loop
+
+// Remember to add spaces after the comma's
+
+// Select H1 and store in variable h1 and when guessed correctly by user change the background to clickedColor
+
+**********************************************************************************************
+
+// Create id in div called "stripe" then create button New Colors above div
+
+// Select #stripe, height to 30px, text-align center, color black
+
+//  Give btn id "reset" and select btn, store in var resetButton
+
+// Create click listener for resetButton:
+// generate all new colors => (generateRandomColors(6))-already existing
+// pick a new random color from array => (pickedColor = pickColor();)-already existing
+// change colorDisplay to match pickedColor => (textContent)
+// change colors of squares => loop through squares and style background to colors[i]-already existing
+
+// Change button to say "Play Again?" if you won in if statement
+
+// After reset button logic add background of H1 to change back to default color when game is won
+
+**********************************************************************************************
+
+// Create 2 buttons under the span(Easy, Hard)
+
+// Create selected class on hard button and set background to blue
+
+// Create id's on new btn's (easyBtn, hardBtn) and select them in JS with same name as var
+
+// Add event listeners to both btn's
+
+// In easy listener add a classList to remove "selected" from hard btn and add "selected" to easy btn
+
+// Do the same for the hard btn listener an switch the 2 "selected" classes
+
+// Add logic for easy mode when btn is pressed:
+// generateRandomColors(3) and set equal to colors in easybtn listener
+// pickColor() function should then equal pickedColor
+// change colorDisplay and it should equal pickedColor
+
+// Create a loop to remove the bottom three boxes on easy mode:
+// for first 3 colors create and if statement for colors[i] and set background of squares equal to colors[i]
+// hide bottom 3 with else statement to display none
+
+// Copy everything from easybtn to hardbtn and change to (6) and remove the if statement and all squares should have display of block
+
+// Create var numSquares and set its value to 6 to keep track of easy and hard mode to fix the play again button pressed in easy mode that generates 6 colors
+
+// Change the 6 in generateRandomColors(6) to numSquares set it in easybtn to be 3 and hardbtn, change all arguments to num of the above mentioned
+
+**********************************************************************************************
+
+// Change correct text to reset when u win the game after pressing play again:
+// change messageDisplay text to empty string in the resetbutton listener
+
+// Change play again display to go back to New Colors after you clicked it and won the game:
+// under colorsDisplay.textContent = pickedColor in resetButton; select "this" textContent to "New Colors"
+
+**********************************************************************************************
+=>> Refactoring the code <<=
+**********************************************************************************************
+
+// Give all difficulty buttons a class mode
+
+// Delete buttons and create var modeButtons and select it
+
+// Loop through mode buttons and add listeners to modeButtons[i]
+
+// Create this.classList.add("selected") and remove the other buttons by hardcoding it
+
+// Create a reset function by copying everything from resetButton listener and replace the "this" with resetButton
+
+// Create an if statement in the modeButtons loop to check if (this.textContent === "Easy") etc and change the numSquares to 3, 6 etc and then call the reset function after the if statements
+
+// Copy the if statement in the easyButton inside the reset function to hide squares
+
+// In the first line of the if statement set squares[i] to block
+
+// Delete everything in resetButton listener and call reset function therein
+
+// Delete all the difficulty buttons as well
+
+**********************************************************************************************
+
+// Create a init function below all variables and call it on top
+
+// In the function add in the modeButton listeners and the for loop code just above the start of functions
+
+// Delete the line under the for loop and call the reset function at the end of the init function
+
+// Give the colors variable an empty array and pickedColor set to no value and reorder variables
+
+// Delete the colorDisplay = pickedColor line above the function declarations
+
+// To make code even cleaner => set modeButton listeners in a setupModeButtons function
+
+// Do the same for the squares and create its own function and call it in the init function
+
+**********************************************************************************************
+=>> FINISHED!!! => You can refactor it even more in a object or modules to not have variables and functions floating around in your code!
+**********************************************************************************************
